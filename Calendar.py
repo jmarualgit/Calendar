@@ -1,6 +1,17 @@
 import Task
+import pandas as pd
 
-t = Task.Task("Study Routers", "Networking", 20260220, 20260218)
+# create CSV file
+def createCalendar():
+    pass
 
-print(t.className)
-    
+# takes in a task object
+def addTask(task):
+    pass
+
+def removeTask():
+    pass
+
+# upon adding a task or changing anything, will sort the tasks in the calendar by doDate
+def autoSort():
+    pass
