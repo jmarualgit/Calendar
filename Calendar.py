@@ -8,7 +8,9 @@ def printCalendar(filepath):
     filepath = "./Files/" + filepath
     df = pd.read_csv(filepath)
     
-    print(df.to_string(justify='left', index=False))
+    print(df.head(n = 10))
+    print("\n...\n")
+    print(str(len(df.index) - 10) + " more tasks available")
 
 def getValue(filepath, row, column):
     filepath = "./Files/" + filepath
