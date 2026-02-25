@@ -13,7 +13,7 @@ calendar = input("Type calendar # to open and press enter\n")
 calendar = os.listdir(path)[int(calendar) - 1]
 Calendar.printCalendar(calendar)
 
-choice = input("\nWhat would you like to do?\n1: Add task\n2: Modify task\n3: Delete task\n4: Exit\n")
+choice = input("\nWhat would you like to do?\n1: Add task\n2: Modify task\n3: Delete task\n4: Mark finished\n5: Exit\n")
 
 match choice:
     case "1":
@@ -46,6 +46,7 @@ match choice:
         Calendar.removeTask(calendar, rowToRemove)
         
     case "4":
-        pass
+        rowToComplete = int(input("Which task # have you finished?\n"))
+        Calendar.markAsComplete(calendar, rowToComplete)
         
 Calendar.printCalendar(calendar)

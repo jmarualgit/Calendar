@@ -40,6 +40,13 @@ def removeTask(filepath, rowToRemove):
     df = df.drop(index=rowToRemove)
     df.to_csv(filepath, index=False)
 
+def markAsComplete(filepath, row):
+    filepath = './Files/' + filepath
+    df = pd.read_csv(filepath)
+    
+    df.at[row, 'Completed'] = True
+    df.to_csv(filepath, index=False)
+
 def autoSort(filepath):
     filepath = "./Files/" + filepath
     df = pd.read_csv(filepath)
